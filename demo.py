@@ -1,13 +1,14 @@
 from engine import Grapher
+import numpy as np
 
 def x(t):
     return np.cos(t)*100
 
 def y(t):
-    return np.sin(t)*50
+    return x(t-1)*2 % 100
 
 def main(g):
-    g.set_time_constraints(t0=0, step=0.02, fps=50)
+    g.set_time_constraints(t0=-100, step=0.02, fps=50)
     g.init_x_eq(x)
     g.init_y_eq(y)
 
