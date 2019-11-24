@@ -17,3 +17,13 @@ def main(g):
 if __name__ == "__main__":
     g = Grapher(winsize=500, axis=500)
     main(g)
+
+# Neat equations I found:
+#   x = 100cos(t)
+#   y = 50log(|x(t)| - |2x(t-1) % 100 - 75|)
+#
+#   x = 100cos(t)
+#   y = log(t)x(t)
+#
+#   x = 2t
+#   y = e**(t/100) + 100sin(t - cos(t))
